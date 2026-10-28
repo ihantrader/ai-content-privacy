@@ -13,13 +13,14 @@ This policy explains what data the Application gets from Google and YouTube, why
 - the channel's id, title and handle — to check that the Application uploads to the right channel;
 - the videos the Application uploads, their ids, titles, privacy status, publishing time and processing status — to show the owner how an upload went;
 - captions and thumbnails the Application sets on those videos;
-- when the owner allows it: the channel's YouTube Analytics reports (views, watch time, revenue), to show the owner how the channel's videos perform.
+- when the owner allows it: the channel's YouTube Analytics and Reporting API reports (views, watch time, impressions, click-through rate, revenue), to show the owner how the channel's videos perform;
+- the text of public comments viewers leave on the channel's own videos — to show the owner viewers' questions, topic requests and criticism and to draft replies. The author's name, channel or id is not stored.
 
 The permissions asked for are: `youtube.force-ssl` (upload videos, set thumbnails and captions, edit the channel's own videos), `yt-analytics.readonly` and `yt-analytics-monetary.readonly` (read the channel's analytics). The Application does not read, write or delete anything else in the Google account.
 
 **Public data of other channels (YouTube Data API with an API key, no sign-in):** titles, short descriptions, publishing dates, durations, view, like and comment counts of public videos and the titles and subscriber counts of public channels found by searches the owner runs — to research which topics an audience watches.
 
-The Application does not collect data about any person other than the owner, does not use cookies or tracking, and shows no advertising.
+Apart from the text of comments on the owner's own videos (kept without the author's identity), the Application does not collect data about any person other than the owner, does not use cookies or tracking, and shows no advertising.
 
 ## 2. How the data is used
 
@@ -40,7 +41,9 @@ Nothing is stored on servers of the Application (it has none).
 ## 4. How long it is kept
 
 - Data obtained from YouTube API Services about other channels' videos and channels (research data) is deleted at the latest 30 days after it was obtained; only the owner's own conclusions (topic ideas, notes) are kept.
-- Data about the owner's own channel and uploads is kept while the owner uses the Application; the owner can delete it with the Application's data folder.
+- The text of comments on the owner's videos is deleted at the latest 30 days after it was last read from YouTube; only counts (how many viewers asked about a topic) are kept.
+- Analytics data of the owner's channel is deleted if access to the channel has not been confirmed for 30 days or the channel is disconnected.
+- Data about the owner's own channel and uploads is otherwise kept while the owner uses the Application; the owner can delete it with the Application's data folder.
 - The access grant is kept until the owner disconnects the channel.
 
 ## 5. How to revoke access
